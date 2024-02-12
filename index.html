@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Äänestyssovellus</title>
+</head>
+
+<body>
+    <div id="kirjautuminen">
+        <h2 style="text-align: center ">Kirjaudu sovellukseen</h2>
+        <input type="text" id="kayttaja" placeholder="Käyttäjänimi">
+        <input type="password" id="salasana" placeholder="Salasana">
+        <button onclick="kirjautuminen()">Kirjaudu</button>
+    </div>
+    
+    <div style="display: none;" id="adminOsio" >
+        <div class="kayttajaInfo"><h1>Ylläpitäjä</h1><button onclick="ulosKirjautuminen()" id="ulosKirjautuminen">Kirjaudu ulos</button></div>
+        <p class="lisaInfo"></p>
+        <div id="aiheAlueet"></div>
+        <h2>Lisää uusi äänestys</h2>
+        <input type="text" id="aiheNimi" placeholder="Aihe">
+        <input type="text" id="vaihtoehtoA" placeholder="Vaihtoehto 1">
+        <input type="text" id="vaihtoehtoB" placeholder="Vaihtoehto 2">
+        <button onclick="lisaaAanestys()">Lisää äänestys</button>
+    </div>
+
+    <div style="display: none;" id="userOsio">
+        <div class="kayttajaInfo"><h1>Äänestys</h1><button onclick="ulosKirjautuminen()" id="ulosKirjautuminen">Kirjaudu ulos</button></div>
+        <p class="lisaInfo"></p>
+        <div id="aiheAlueetUser"></div>
+    </div>
+    <img id="palaaYlos" src="palaaYlos.webp" alt="">
+    <script src="sovellus.js"></script>
+    <script src="palaaYlos.js"></script>
+</body>
+</html>
