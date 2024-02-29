@@ -37,7 +37,7 @@ function kirjautuminen() {
 // Uloskirjautuminen sovelluksesta
 function ulosKirjautuminen() {
     if (confirm("Olet kirjautumassa ulos sovelluksesta.")) {
-        window.location.reload();
+        window.location.href="./index.html"
     }
 }
 
@@ -48,10 +48,9 @@ function yllapitajaToiminnot() {
     aiheAlueetSisalto.innerHTML = "";
 
     if (kaikkiAiheAlueet.length > 0) {
-        document.querySelector(".lisaInfo").innerHTML = "<h2 style='text-align: left;'>Äänestystulokset</h2>";
-
+        document.querySelector(".lisaInfoAdmin").innerHTML = "<h2 style='text-align: left;'>Äänestystulokset</h2>";
     } else {
-        document.querySelector(".lisaInfo").innerHTML = "";
+        document.querySelector(".lisaInfoAdmin").innerHTML = "";
     }
 
     kaikkiAiheAlueet.forEach((aiheAlue, index) => {
@@ -132,9 +131,9 @@ function kayttajaToiminnot() {
     aiheAluetSisaltoUser.innerHTML = "";
 
     if (kaikkiAiheAlueet.length > 0) {
-        document.querySelector(".lisaInfo").textContent = "Äänestä haluamaasi vaihtoehtoa painamalla nappia.";
+        document.querySelector(".lisaInfoUser").innerHTML = "Äänestä haluamaasi vaihtoehtoa painamalla nappia.";
     } else {
-        document.querySelector(".lisaInfo").textContent = "Äänestystä ei ole vielä avattu.";
+        document.querySelector(".lisaInfoUser").innerHTML = "Äänestystä ei ole vielä avattu.";
     }
 
     kaikkiAiheAlueet.forEach((aiheAlue, aiheIndeksi) => {
