@@ -37,7 +37,7 @@ function kirjautuminen() {
 // Uloskirjautuminen sovelluksesta
 function ulosKirjautuminen() {
     if (confirm("Olet kirjautumassa ulos sovelluksesta.")) {
-        window.location.reload();
+        window.location.href="./index.html"
         window.location.href="./ulos.html"
     }
 }
